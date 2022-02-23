@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F7AABF1D27C675D5008BA037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AABF1C27C675D5008BA037 /* AppDelegate.swift */; };
 		F7AABF1F27C675D5008BA037 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AABF1E27C675D5008BA037 /* SceneDelegate.swift */; };
-		F7AABF2127C675D5008BA037 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AABF2027C675D5008BA037 /* ViewController.swift */; };
+		F7AABF2127C675D5008BA037 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AABF2027C675D5008BA037 /* SearchViewController.swift */; };
 		F7AABF2427C675D5008BA037 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AABF2227C675D5008BA037 /* Main.storyboard */; };
 		F7AABF2627C675D6008BA037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AABF2527C675D6008BA037 /* Assets.xcassets */; };
 		F7AABF2927C675D6008BA037 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AABF2727C675D6008BA037 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		F7AABF1927C675D5008BA037 /* VKApiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AABF1C27C675D5008BA037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7AABF1E27C675D5008BA037 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7AABF2027C675D5008BA037 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7AABF2027C675D5008BA037 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F7AABF2327C675D5008BA037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7AABF2527C675D6008BA037 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7AABF2827C675D6008BA037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,55 @@
 		F7AABF1B27C675D5008BA037 /* VKApiApp */ = {
 			isa = PBXGroup;
 			children = (
-				F7AABF1C27C675D5008BA037 /* AppDelegate.swift */,
-				F7AABF1E27C675D5008BA037 /* SceneDelegate.swift */,
-				F7AABF2027C675D5008BA037 /* ViewController.swift */,
-				F7AABF2227C675D5008BA037 /* Main.storyboard */,
-				F7AABF2527C675D6008BA037 /* Assets.xcassets */,
-				F7AABF2727C675D6008BA037 /* LaunchScreen.storyboard */,
-				F7AABF2A27C675D6008BA037 /* Info.plist */,
+				F7AABF3427C67682008BA037 /* Assets */,
+				F7AABF3327C67659008BA037 /* View Controller */,
+				F7AABF3227C67649008BA037 /* Storyboard */,
+				F7AABF3127C67640008BA037 /* Resources */,
+				F7AABF3027C67633008BA037 /* Sources */,
 			);
 			path = VKApiApp;
+			sourceTree = "<group>";
+		};
+		F7AABF3027C67633008BA037 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F7AABF1C27C675D5008BA037 /* AppDelegate.swift */,
+				F7AABF1E27C675D5008BA037 /* SceneDelegate.swift */,
+				F7AABF2A27C675D6008BA037 /* Info.plist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F7AABF3127C67640008BA037 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F7AABF3227C67649008BA037 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F7AABF2227C675D5008BA037 /* Main.storyboard */,
+				F7AABF2727C675D6008BA037 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F7AABF3327C67659008BA037 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7AABF2027C675D5008BA037 /* SearchViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		F7AABF3427C67682008BA037 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F7AABF2527C675D6008BA037 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7AABF2127C675D5008BA037 /* ViewController.swift in Sources */,
+				F7AABF2127C675D5008BA037 /* SearchViewController.swift in Sources */,
 				F7AABF1D27C675D5008BA037 /* AppDelegate.swift in Sources */,
 				F7AABF1F27C675D5008BA037 /* SceneDelegate.swift in Sources */,
 			);
@@ -291,7 +331,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L2P3BDMVVB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VKApiApp/Info.plist;
+				INFOPLIST_FILE = VKApiApp/Sources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -306,7 +346,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,7 +359,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L2P3BDMVVB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VKApiApp/Info.plist;
+				INFOPLIST_FILE = VKApiApp/Sources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,7 +374,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
