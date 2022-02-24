@@ -15,7 +15,8 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         searchButtonOutlet.layer.cornerRadius = 10
     }
-
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let collectionViewController = segue.destination as! CollectionViewController
+        collectionViewController.domain = enterAdress.text ?? ""
+    }
 }
-
