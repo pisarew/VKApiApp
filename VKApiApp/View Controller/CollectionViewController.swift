@@ -60,10 +60,10 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
 extension CollectionViewController{
     // MARK: Networking
     
-    func getData(domain: String) {
+    func getData(domain: String, count: String) {
         
         print("ХУЙ\n\n\n\n\n\n")
-        guard let url = URL(string: "\(urlAdress)?access_token=\(token)&v=5.131&domain=\(domain)&count=3") else {
+        guard let url = URL(string: "\(urlAdress)?access_token=\(token)&v=5.131&domain=\(domain)&count=\(count)") else {
             return
         }
         let session = URLSession.shared

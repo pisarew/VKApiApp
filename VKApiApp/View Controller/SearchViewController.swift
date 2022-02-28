@@ -11,6 +11,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchButtonOutlet: UIButton!
     
     @IBOutlet weak var enterAdress: UITextField!
+    @IBOutlet weak var countLabel: UILabel!
     
     private var json: Welcome? = nil
     
@@ -20,7 +21,12 @@ class SearchViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let collectionViewController = segue.destination as! CollectionViewController
-        collectionViewController.getData(domain: enterAdress.text ?? "")
+        collectionViewController.getData(domain: enterAdress.text ?? "", count: countLabel.text ?? "1")
+    }
+    
+    
+    @IBAction func changeCountAction(_ sender: UIStepper) {
+        countLabel.text = String(Int(sender.value))
     }
 }
 
