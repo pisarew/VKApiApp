@@ -11,12 +11,16 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchButtonOutlet: UIButton!
     
     @IBOutlet weak var enterAdress: UITextField!
+    
+    private var json: Welcome? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchButtonOutlet.layer.cornerRadius = 10
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let collectionViewController = segue.destination as! CollectionViewController
-        collectionViewController.domain = enterAdress.text ?? ""
+        collectionViewController.getData(domain: enterAdress.text ?? "")
     }
 }
+
