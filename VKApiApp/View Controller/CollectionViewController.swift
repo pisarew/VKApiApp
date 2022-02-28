@@ -12,6 +12,7 @@ private let reuseIdentifier = "cell"
 class CollectionViewController: UICollectionViewController {
     
     var jsonData: Welcome? = nil
+    private var selectText = ""
     
     convenience init (data: Welcome?){
         self.init()
@@ -36,6 +37,15 @@ class CollectionViewController: UICollectionViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let postVC = segue.destination as? PostViewController
+        guard let indexPath = collectionView.indexPathsForSelectedItems else { return }
+        postVC?.unixDate = self.jsonData?.response.items[indexPath[0].row].date ?? 0
+        postVC?.text = self.jsonData?.response.items[indexPath[0].row].text ?? ""
+    }
+    
+   
+    
     // MARK: Privare
     
     private func errorAllert(){
@@ -52,7 +62,7 @@ class CollectionViewController: UICollectionViewController {
     
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width - 20, height: 200)
+        CGSize(width: UIScreen.main.bounds.width - 20, height: 150)
     }
     
 }
@@ -62,7 +72,6 @@ extension CollectionViewController{
     
     func getData(domain: String, count: String) {
         
-        print("ХУЙ\n\n\n\n\n\n")
         guard let url = URL(string: "\(urlAdress)?access_token=\(token)&v=5.131&domain=\(domain)&count=\(count)") else {
             return
         }
@@ -81,7 +90,6 @@ extension CollectionViewController{
                     self.collectionView.reloadData()
                 }
                 
-                print(self.jsonData ?? "ХУЙ")
             }
             catch let error{
                 self.errorAllert()

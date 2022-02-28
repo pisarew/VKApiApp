@@ -18,6 +18,7 @@
 		F7AABF3A27C68742008BA037 /* PostsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AABF3927C68742008BA037 /* PostsCollectionViewCell.swift */; };
 		F7AABF3C27C7CECC008BA037 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F7AABF3B27C7CECC008BA037 /* .gitignore */; };
 		F7AABF3E27CA602D008BA037 /* PrivateResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AABF3D27CA602D008BA037 /* PrivateResources.swift */; };
+		F7AABF4027CD1996008BA037 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AABF3F27CD1996008BA037 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F7AABF3927C68742008BA037 /* PostsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F7AABF3B27C7CECC008BA037 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F7AABF3D27CA602D008BA037 /* PrivateResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateResources.swift; sourceTree = "<group>"; };
+		F7AABF3F27CD1996008BA037 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				F7AABF2027C675D5008BA037 /* SearchViewController.swift */,
 				F7AABF3727C682D4008BA037 /* CollectionViewController.swift */,
 				F7AABF3927C68742008BA037 /* PostsCollectionViewCell.swift */,
+				F7AABF3F27CD1996008BA037 /* PostViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AABF4027CD1996008BA037 /* PostViewController.swift in Sources */,
 				F7AABF2127C675D5008BA037 /* SearchViewController.swift in Sources */,
 				F7AABF3627C6825A008BA037 /* Responce.swift in Sources */,
 				F7AABF3A27C68742008BA037 /* PostsCollectionViewCell.swift in Sources */,
